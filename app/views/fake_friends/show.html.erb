@@ -1,0 +1,12 @@
+<h1><%= @fake_friend.name %> <%= link_to "edit fake_friend", edit_fake_friend_path %></h1>
+<p><%= @fake_friend.gender %></p>
+<p><%= @fake_friend.age %></p>
+<p><%= @fake_friend.address %></p>
+<p><%= @fake_friend.main_description %></p>
+
+<%= link_to "back", fake_friends_path %>
+
+<%= link_to "Delete",
+  fake_friend_path(@fake_friend),
+  data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
+%>
