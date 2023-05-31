@@ -1,0 +1,85 @@
+:root {
+  --clr-primary: #651fff;
+  --clr-gray: #37474f;
+  --clr-gray-light: #b0bec5;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  color: var(--clr-gray);
+  // margin: 2rem;
+}
+
+.all-profile-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 20rem);
+  justify-content: center;
+}
+
+.card-container {
+  overflow: hidden;
+  box-shadow: 0px 2px 8px 0px var(--clr-gray-light);
+  background-color: white;
+  text-align: center;
+  border-radius: 1rem;
+  position: relative;
+  margin: 0.5rem;
+}
+
+// .banner-img {
+//   position: absolute;
+//   background-image: url(https://img.freepik.com/premium-vector/green-monstera-leaves-background-design-resource-vector_53876-169436.jpg?w=360);
+//   height: 10rem;
+//   width: 100%;
+//   background-position: center;
+//   background-repeat: no-repeat;
+//   background-size: cover;
+// }
+
+.profile-img {
+  width: 15rem;
+  height: 15rem;
+  // clip-path: circle(60px at center);
+  margin: auto;
+  margin-top: 1rem;
+}
+
+.name {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.age {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.name-age {
+  display: flex;
+}
+
+.description {
+  margin: 1rem 2rem;
+  font-size: 0.9rem;
+}
+
+.card-btn {
+  width: 100%;
+  border: none;
+  font-size: 1rem;
+  font-weight: bold;
+  color: white;
+  padding: 1rem;
+  background-color: var(--clr-primary);
+}
+
+.back-category {
+ font-weight: bold;
+ text-decoration: double;
+}
