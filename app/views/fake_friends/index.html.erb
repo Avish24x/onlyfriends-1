@@ -18,6 +18,7 @@
   <p><%= fake_friend.age %></p>
   <p><%= fake_friend.main_description %></p>
   <p><%= fake_friend.rating %></p>
+
 <% end %>
 
 
@@ -67,3 +68,6 @@
       <button class='btn'>View More</button>
     </div>
   </div>
+<p><%= link_to "add a new fake_friend", new_fake_friend_path %></p>
+
+<p><%= link_to "bookings", bookings_index_path %></p>

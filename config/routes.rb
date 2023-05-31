@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'bookings/index'
   # get 'fake_friends/index'
   # get 'fake_friends/create'
   # get 'fake_friends/new'
@@ -8,5 +9,11 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "articles#index"
-  resources :fake_friends
+  resources :fake_friends do
+    resources :bookings
+  end
+  resources :bookings, only: %i[destroy index]
+
+  resources :users
+  # resources :bookings, only: [:destroy]
 end

@@ -10,3 +10,11 @@
   fake_friend_path(@fake_friend),
   data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
 %>
+
+<h2>book me:</h2>
+<%= simple_form_for([@fake_friend, @booking]) do |f| %>
+  <%= f.input :booking_start, html5: true %>
+  <%= f.input :booking_end, html5: true %>
+  <%= f.input :total_price %>
+  <%= f.submit %>
+<% end %>
