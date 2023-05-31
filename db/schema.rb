@@ -32,7 +32,6 @@ ActiveRecord::Schema[7.0].define(version: 2023_05_31_065546) do
     t.integer "age"
     t.text "address"
     t.text "main_description"
-    t.decimal "price"
     t.decimal "rating"
     t.bigint "user_id", null: false
     t.datetime "created_at", null: false

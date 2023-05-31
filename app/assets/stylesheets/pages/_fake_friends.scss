@@ -13,16 +13,16 @@
 
 body {
   color: var(--clr-gray);
-  margin: 2rem;
+  // margin: 2rem;
 }
 
-.wrapper-grid {
+.all-profile-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, 20rem);
   justify-content: center;
 }
 
-.container {
+.card-container {
   overflow: hidden;
   box-shadow: 0px 2px 8px 0px var(--clr-gray-light);
   background-color: white;
@@ -32,20 +32,22 @@ body {
   margin: 0.5rem;
 }
 
-.banner-img {
-  position: absolute;
-  background-image: url(https://img.freepik.com/premium-vector/green-monstera-leaves-background-design-resource-vector_53876-169436.jpg?w=360);
-  height: 10rem;
-  width: 100%;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
+// .banner-img {
+//   position: absolute;
+//   background-image: url(https://img.freepik.com/premium-vector/green-monstera-leaves-background-design-resource-vector_53876-169436.jpg?w=360);
+//   height: 10rem;
+//   width: 100%;
+//   background-position: center;
+//   background-repeat: no-repeat;
+//   background-size: cover;
+// }
 
 .profile-img {
-  width: 8rem;
-  clip-path: circle(60px at center);
-  margin-top: 4.5rem;
+  width: 15rem;
+  height: 15rem;
+  // clip-path: circle(60px at center);
+  margin: auto;
+  margin-top: 1rem;
 }
 
 .name {
@@ -53,12 +55,21 @@ body {
   font-size: 1.5rem;
 }
 
+.age {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.name-age {
+  display: flex;
+}
+
 .description {
   margin: 1rem 2rem;
   font-size: 0.9rem;
 }
 
-.btn {
+.card-btn {
   width: 100%;
   border: none;
   font-size: 1rem;
@@ -66,4 +77,9 @@ body {
   color: white;
   padding: 1rem;
   background-color: var(--clr-primary);
+}
+
+.back-category {
+ font-weight: bold;
+ text-decoration: double;
 }
