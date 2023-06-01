@@ -1,189 +1,55 @@
 // body {
-//   background: rgba(0, 0, 0, 0.4);
-// }
-
-
-// .fakefriendsform {
-//   max-width: 400px;
-//   margin: 20px auto;
-//   border: 1px solid rgba(0, 0, 0, 0.2);
-//   border-radius: 4px;
-//   background-color: #fff;
-//   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-//   padding: 20px;
-
-//   .form-group {
-//     margin-bottom: 1rem;
-
-//     label {
-//       display: block;
-//       margin-bottom: 0.5rem;
-//       font-weight: bold;
-//       color: #000;
-//     }
-
-//     input[type="text"],
-//     input[type="number"],
-//     textarea,
-//     select {
-//       width: 100%;
-//       padding: 0.375rem 0.75rem;
-//       font-size: 1rem;
-//       line-height: 1.5;
-//       color: #000;
-//       border: 1px solid #ced4da;
-//       border-radius: 0.25rem;
-//       transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-
-//       &:focus {
-//         border-color: #80bdff;
-//         outline: 0;
-//         box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
-//       }
-//     }
-
-//     select {
-//       height: calc(2.25rem + 2px);
-//     }
-
-//     textarea {
-//       min-height: 120px;
-//     }
-
-//     .error {
-//       color: #dc3545;
-//       margin-top: 0.25rem;
-//     }
-//   }
-
-//   input[type="submit"] {
-//     display: block;
-//     font-weight: bold;
-//     color: white;
-//     background-color: #007bff;
-//     border-color: #007bff;
-//     padding: 0.375rem 0.75rem;
-//     font-size: 1rem;
-//     line-height: 1.5;
-//     text-align: center;
-//     text-decoration: none;
-//     vertical-align: middle;
-//     cursor: pointer;
-//     border: 1px solid transparent;
-//     border-radius: 0.25rem;
-//     transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
-//       border-color 0.15s ease-in-out;
-//     margin: 0 auto;
-
-//     &:hover {
-//       background-color: #0069d9;
-//       border-color: #0062cc;
-//     }
-//   }
-// }
-// .login-block {
-// 	background: #DE6262;
-// 	/* fallback for old browsers */
-// 	background: -webkit-linear-gradient(to bottom, #FFB88C, #DE6262);
-// 	/* Chrome 10-25, Safari 5.1-6 */
-// 	background: linear-gradient(to bottom, #FFB88C, #DE6262);
-// 	/* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-// 	float: left;
-// 	width: 100%;
-// 	padding: 50px 0;
-// }
-
-// .banner-sec {
-// 	background: url(https://static.pexels.com/photos/33972/pexels-photo.jpg) no-repeat left bottom;
-// 	background-size: cover;
-// 	min-height: 500px;
-// 	border-radius: 0 10px 10px 0;
-// 	padding: 0;
+//   font-family: Arial, sans-serif;
+//   background-color: #f2f2f2;
 // }
 
 // .container {
-// 	background: #fff;
-// 	border-radius: 10px;
-// 	box-shadow: 15px 20px 0px rgba(0, 0, 0, 0.1);
+//   max-width: 1200px;
+//   margin: 0 auto;
+//   padding: 20px;
 // }
 
-// .carousel-inner {
-// 	border-radius: 0 10px 10px 0;
+// .page-title {
+//   font-size: 24px;
+//   font-weight: bold;
+//   margin-bottom: 20px;
 // }
 
-// .carousel-caption {
-// 	text-align: left;
-// 	left: 5%;
+// .fake-friend-details {
+//   background-color: #fff;
+//   border: 1px solid #ccc;
+//   padding: 20px;
 // }
 
-// .login-sec {
-// 	padding: 50px 30px;
-// 	position: relative;
+// .field-label {
+//   font-weight: bold;
 // }
 
-// .login-sec .copy-text {
-// 	position: absolute;
-// 	width: 80%;
-// 	bottom: 20px;
-// 	font-size: 13px;
-// 	text-align: center;
+// .field-value {
+//   margin-bottom: 10px;
 // }
 
-// .login-sec .copy-text i {
-// 	color: #FEB58A;
+// .action-buttons {
+//   margin-top: 20px;
 // }
 
-// .login-sec .copy-text a {
-// 	color: #E36262;
+// .edit-button {
+//   background-color: #007bff;
+//   color: #fff;
+//   padding: 10px 20px;
+//   border: none;
+//   border-radius: 4px;
+//   cursor: pointer;
 // }
 
-// .login-sec h2 {
-// 	margin-bottom: 30px;
-// 	font-weight: 800;
-// 	font-size: 30px;
-// 	color: #DE6262;
+// .delete-button {
+//   background-color: #dc3545;
+//   color: #fff;
+//   padding: 10px 20px;
+//   border: none;
+//   border-radius: 4px;
+//   cursor: pointer;
 // }
-
-// .login-sec h2:after {
-// 	content: " ";
-// 	width: 100px;
-// 	height: 5px;
-// 	background: #FEB58A;
-// 	display: block;
-// 	margin-top: 20px;
-// 	border-radius: 3px;
-// 	margin-left: auto;
-// 	margin-right: auto
-// }
-
-// .btn-login {
-// 	background: #DE6262;
-// 	color: #fff;
-// 	font-weight: 600;
-// }
-
-// .banner-text {
-// 	width: 70%;
-// 	position: absolute;
-// 	bottom: 40px;
-// 	padding-left: 20px;
-// }
-
-// .banner-text h2 {
-// 	color: #fff;
-// 	font-weight: 600;
-// }
-
-// .banner-text h2:after {
-// 	content: " ";
-// 	width: 100px;
-// 	height: 5px;
-// 	background: #FFF;
-// 	display: block;
-// 	margin-top: 20px;
-// 	border-radius: 3px;
-// }
-
-// .banner-text p {
-// 	color: #fff;
-// }
+.formcontainer {
+  color :yellow;
+}
