@@ -6,7 +6,11 @@
     <ul class="name-age">
       <li><h1><%= @fake_friend.name %></h1></li>
       <li><h1><%= @fake_friend.age %></h1></li>
+
+      <li><h1 id="gender-profile"><%= @fake_friend.gender %></h1></li>
+
       <li><h1><%= @fake_friend.price %></h1></li>
+  
     </ul>
     <p><%= @fake_friend.main_description %></p>
     <p>Other Categories:</p>
@@ -15,19 +19,21 @@
 
 <%= link_to "edit fake_friend", edit_fake_friend_path %>
 
-<h2>Book me:</h2>
 
-<%= simple_form_for([@fake_friend, @booking]) do |f| %>
-  <%= f.input :booking_start, html5: true %>
-  <%= f.input :booking_end, html5: true %>
-  <p><%= @booking.total_price %><p>
-  <%= f.submit %>
-<% end %>
+<div class="book-box">
+  <%= simple_form_for([@fake_friend, @booking], html: { class: "booking-container"}) do |f| %>
+    <h2 class="book-me-text">Book Me</h2>
+    <%= f.input :booking_start, input_html: { class: "date-of-booking" } , html5: true %>
+    <%= f.input :booking_end, input_html: { class: "date-of-booking" }, html5: true %>
+<!--     <%= f.input :total_price, input_html: { class: "date-of-booking" } %> -->
+    <%= f.submit 'Confirm', class: "blue-button-book" %>
+  <% end %>
+</div>
 
 <%= link_to "Delete",
   fake_friend_path(@fake_friend),
   data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
 %>
 
-<p><%= @fake_friend.gender %></p>
+
 <p><%= @fake_friend.address %></p>

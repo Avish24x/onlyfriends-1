@@ -62,6 +62,7 @@ body {
 .name-age {
   display: flex;
   justify-content: space-evenly;
+  align-items: baseline;
 }
 
 .description {
@@ -86,3 +87,8 @@ body {
  font-weight: bold;
  text-decoration: double;
 }
+
+
+// .search-bar {
+
+// }

@@ -11,9 +11,9 @@
       <%= text_field_tag :query,
             params[:query],
             class: "form-control",
-            placeholder: "Type a keyword"
+            placeholder: "Type a keyword, ex: Volleyball"
         %>
-      <%= submit_tag "Search", name: "", class: "btn btn-primary" %>
+      <%= submit_tag "Search", name: "", class: "btn btn-primary search-bar" %>
     <% end %>
   </div>
 </div>
@@ -21,9 +21,11 @@
   <div class="all-profile-container">
    <% @fake_friends.each do |fake_friend| %>
       <div class="card-container">
+
         <div class='banner-img'></div>
           <%= cl_image_tag fake_friend.photo.key, height: 300, width: 400, crop: :fill %>
           <ul class="name-age">
+
           <li><h1 class="name"><%= fake_friend.name %></h1></li>
           <li><h1 class="age"><%= fake_friend.age %></h1></li>
         </ul>
@@ -37,9 +39,10 @@
 
 <p><%= link_to "bookings", bookings_index_path %></p>
 
-<%= cl_image_tag("cld-sample-5",
+<!-- <%= cl_image_tag("cld-sample-5",
       width: 400, height: 300, crop: :fill) %>
 
 <!-- for face detection -->
 <%= cl_image_tag("IMAGE_WITH_FACE_ID",
       width: 150, height: 150, crop: :thumb, gravity: :face) %>
+ -->

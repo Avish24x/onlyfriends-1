@@ -5,7 +5,7 @@
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   display: flex;
   align-items: center;
-  margin-top: 30px;
+  margin: 30px;
 }
 
 .profile-fake-friend img {
@@ -15,13 +15,13 @@
 }
 
 .profile-fake-friend h1 {
-  font-size: 60px;
+  font-size: 50px;
   font-weight: bold;
   margin: 0;
 }
 
 .profile-fake-friend p {
-  font-size: 30px;
+  font-size: 20px;
   line-height: 1.4;
   opacity: .7;
   margin-bottom: 0;
@@ -36,4 +36,94 @@
 
 .profile-fake-friend .all-info {
   padding: 24px;
+}
+
+#gender-profile {
+  font-size: 25px;
+}
+
+.name-age h1 {
+  height: fit-content;
+}
+
+
+// For Booking card
+$ruler: 16px;
+$color-blue: #1d00ae;
+$color-bg: #EBECF0;
+$color-shadow: #BABECC;
+$color-white: #FFF;
+
+.booking-container {
+  background-color:$color-bg;
+}
+
+.booking-container p, input, select, textarea, button {
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: -0.2px;
+    font-size: $ruler;
+}
+
+.booking-container p {
+  color: $color-shadow;
+  text-shadow: 1px 1px 1px $color-white;
+}
+
+
+.booking-container {
+  padding: $ruler;
+  width: $ruler*20;
+  margin: 0 auto;
+}
+
+.date-of-booking {
+  border: 0;
+  outline: 0;
+  font-size: $ruler;
+  border-radius: $ruler*20;
+  padding: $ruler;
+  background-color:$color-bg;
+  text-shadow: 1px 1px 0 $color-white;
+}
+
+.date-of-booking {
+  margin-right: $ruler/2;
+  box-shadow:  inset 2px 2px 5px $color-shadow, inset -5px -5px 10px $color-white;
+  width: 100%;
+  box-sizing: border-box;
+  transition: all 0.2s ease-in-out;
+  appearance: none;
+  -webkit-appearance: none;
+
+  &:focus {
+    box-shadow:  inset 1px 1px 2px $color-shadow, inset -1px -1px 2px $color-white;
+  }
+}
+
+.blue-button-book {
+  display: block;
+  width: 100%;
+  color:$color-white;
+  border: 0;
+  outline: 0;
+  font-size: $ruler;
+  border-radius: $ruler*20;
+  padding: $ruler;
+  background-color:#651fff;
+  font-weight: bolder;
+}
+.input-group {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+
+  label {
+    margin: 0;
+    flex: 1;
+  }
+}
+
+.book-me-text {
+  text-align: center;
+  font-weight: bolder;
 }
