@@ -4,6 +4,7 @@ class FakeFriend < ApplicationRecord
   belongs_to :user
   has_many :tags, dependent: :destroy
   has_many :categories, through: :tags
+  has_one_attached :photo
 
   validates :name, :gender, :age, :main_description, :price, presence: true
   validates :name, uniqueness: true

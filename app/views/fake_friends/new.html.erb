@@ -8,6 +8,7 @@
     <%= f.input :address, label_html: { class: "popo" }%>
     <%= f.input :main_description %>
     <%= f.input :categories, as: :check_boxes, collection: Category.all %>
+    <%= f.input :photo, as: :file %>
     <%= f.submit %>
   <% end %>
 
