@@ -81,5 +81,5 @@
 
 <% @categories.each do |category| %>
   <%= @categories = @categories.find(params[:id]) %>
-  <p><%= link_to category, fake_friend_categories_path(@categories) %></p>
+  <p><%= link_to category, fake_friend_categories_path(category) %></p>
 <% end %>
