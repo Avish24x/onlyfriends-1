@@ -1,9 +1,40 @@
-<%= simple_form_for(@fake_friend) do |f| %>
-  <%= f.input :name %>
-  <%= f.input :gender %>
-  <%= f.input :age %>
-  <%= f.input :address %>
-  <%= f.input :main_description %>
-  <%= f.submit %>
-
-<% end %>
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Simple Form Example</title>
+  <style>
+    /* Place the compiled CSS code here */
+    /* ... */
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="login-form-section">
+      <h2>Login Now</h2>
+      <%= simple_form_for(@fake_friend) do |f| %>
+        <div class="form-group">
+          <%= f.label :name, class: "text-uppercase" %>
+          <%= f.text_field :name, class: "form-control", placeholder: "Enter your name" %>
+        </div>
+        <div class="form-group">
+          <%= f.label :gender, class: "text-uppercase" %>
+          <%= f.text_field :gender, class: "form-control", placeholder: "Enter your gender" %>
+        </div>
+        <div class="form-group">
+          <%= f.label :age, class: "text-uppercase" %>
+          <%= f.text_field :age, class: "form-control", placeholder: "Enter your age" %>
+        </div>
+        <div class="form-group">
+          <%= f.label :address, class: "text-uppercase" %>
+          <%= f.text_field :address, class: "form-control", placeholder: "Enter your address" %>
+        </div>
+        <div class="form-group">
+          <%= f.label :main_description, class: "text-uppercase" %>
+          <%= f.text_field :main_description, class: "form-control", placeholder: "Enter your main description" %>
+        </div>
+        <%= f.submit "Submit", class: "btn-login" %>
+      <% end %>
+    </div>
+  </div>
+</body>
+</html>
