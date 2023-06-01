@@ -11,8 +11,10 @@ Rails.application.routes.draw do
   # root "articles#index"
   resources :fake_friends do
     resources :bookings
+    resources :categories
   end
   resources :bookings, only: %i[destroy index]
+  resources :categories, only: %i[destroy index]
 
   resources :users
   # resources :bookings, only: [:destroy]

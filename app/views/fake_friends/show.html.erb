@@ -16,6 +16,7 @@
 <%= link_to "edit fake_friend", edit_fake_friend_path %>
 
 <h2>Book me:</h2>
+
 <%= simple_form_for([@fake_friend, @booking]) do |f| %>
   <%= f.input :booking_start, html5: true %>
   <%= f.input :booking_end, html5: true %>
