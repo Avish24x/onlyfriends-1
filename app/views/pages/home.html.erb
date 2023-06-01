@@ -71,3 +71,7 @@
  <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
 </body>
 </html>
+
+<% @categories.each do |category| %>
+  <p><%= link_to category, fake_friend_path(@categories) %></p>
+<% end %>
