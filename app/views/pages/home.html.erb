@@ -80,6 +80,5 @@
 </html>
 
 <% @categories.each do |category| %>
-  <%= @categories = @categories.find(params[:id]) %>
-  <p><%= link_to category, fake_friend_categories_path(@categories) %></p>
+  <p><%= link_to category.name, fake_friends_path(query_category: category.name) %></p>
 <% end %>
