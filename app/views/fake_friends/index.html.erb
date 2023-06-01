@@ -11,9 +11,9 @@
       <%= text_field_tag :query,
             params[:query],
             class: "form-control",
-            placeholder: "Type a keyword"
+            placeholder: "Type a keyword, ex: Volleyball"
         %>
-      <%= submit_tag "Search", name: "", class: "btn btn-primary" %>
+      <%= submit_tag "Search", name: "", class: "btn btn-primary search-bar" %>
     <% end %>
   </div>
 </div>
@@ -21,7 +21,6 @@
   <div class="all-profile-container">
    <% @fake_friends.each do |fake_friend| %>
       <div class="card-container">
-        <div class='banner-img'></div>
         <img src='https://i.pinimg.com/564x/61/88/81/61888128ab65bde930ff3ce56f7727d0.jpg' alt='profile image' class="profile-img">
         <ul class="name-age">
           <li><h1 class="name"><%= fake_friend.name %></h1></li>
