@@ -3,6 +3,9 @@ class FakeFriendsController < ApplicationController
 
   def index
     @fake_friends = FakeFriend.all
+    if params[:query].present?
+      @fake_friends = @fake_friends.where("main_description ILIKE ?", "%#{params[:query]}%")
+    end
   end
 
   def new
