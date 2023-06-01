@@ -1,0 +1,11 @@
+<% @fake_friends.each do |fake_friend| %>
+  <h1>
+    <%= link_to fake_friend.name, fake_friend_path(fake_friend) %>
+  </h1>
+  <p><%= fake_friend.gender %></p>
+  <p><%= fake_friend.address %></p>
+  <p><%= fake_friend.age %></p>
+  <p><%= fake_friend.main_description %></p>
+  <p><%= fake_friend.rating %></p>
+  <p><%= fake_friend.category_ids %></p>
+<% end %>
