@@ -14,6 +14,7 @@ class FakeFriendsController < ApplicationController
     @fake_friend.user = current_user
     @fake_friend.rating = 0
     if @fake_friend.save
+      categories_params[:categories].compact.each { |category_id| Tag.create(fake_friend: @fake_friend, category_id: category_id) }
       redirect_to fake_friend_path(@fake_friend)
     else
       render :new, status: :unprocessable_entity
@@ -27,6 +28,7 @@ class FakeFriendsController < ApplicationController
   def edit; end
 
   def update
+    #categories_params[:categories].compact.each { |category_id| Tag.create(fake_friend: @fake_friend, category_id: category_id) }
     @fake_friend.update(fake_friend_params)
     redirect_to fake_friend_path(@fake_friend)
   end
@@ -40,6 +42,10 @@ class FakeFriendsController < ApplicationController
 
   def fake_friend_params
     params.require(:fake_friend).permit(:name, :gender, :age, :address, :main_description)
+  end
+
+  def categories_params
+    params.require(:fake_friend).permit(categories: [])
   end
 
   def set_fake_friend

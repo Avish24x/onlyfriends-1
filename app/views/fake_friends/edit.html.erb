@@ -4,6 +4,6 @@
   <%= f.input :age %>
   <%= f.input :address %>
   <%= f.input :main_description %>
+  <%= f.input :categories, as: :check_boxes, collection: Category.all %>
   <%= f.submit %>
-
 <% end %>
