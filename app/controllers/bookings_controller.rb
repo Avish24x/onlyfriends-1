@@ -14,6 +14,10 @@ class BookingsController < ApplicationController
     @booking = Booking.new(booking_params)
     @booking.user = current_user
     @booking.fake_friend = @fake_friend
+
+    @booking.total_price = 0
+    @booking.total_price = (@fake_friend.price * (@booking.booking_end - @booking.booking_start)) / 86_400
+
     @booking.save
     redirect_to bookings_index_path(@booking)
   end

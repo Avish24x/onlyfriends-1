@@ -56,7 +56,7 @@
     Lunch
   </div>
 
-  <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/dinner.jpg)">
+  <div class="card-category" style="backgroundhttps://github.com/OhlalaLea/onlyfriends/pull/17/conflict?name=app%252Fviews%252Fpages%252Fhome.html.erb&ancestor_oid=105e555f94f7bdcf9656034dddba49547cbaa6c7&base_oid=7ead5cf85d53d2dc840cc199c297619d4a595a9a&head_oid=6274c009c7560050397742ba886c31cb14205e5a-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/dinner.jpg)">
     Sport
   </div>
 
@@ -80,6 +80,5 @@
 </html>
 
 <% @categories.each do |category| %>
-  <%= @categories = @categories.find(params[:id]) %>
-  <p><%= link_to category, fake_friend_categories_path(@categories) %></p>
+  <p><%= link_to category.name, fake_friends_path(query_category: category.name) %></p>
 <% end %>

@@ -14,7 +14,7 @@ Rails.application.routes.draw do
     resources :categories
   end
   resources :bookings, only: %i[destroy index]
-  resources :categories, only: %i[destroy index]
+  resources :categories, only: %i[destroy]
 
   resources :users
   # resources :bookings, only: [:destroy]

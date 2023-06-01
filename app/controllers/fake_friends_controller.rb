@@ -3,9 +3,15 @@ class FakeFriendsController < ApplicationController
 
   def index
     @fake_friends = FakeFriend.all
-    if params[:query].present?
-      @fake_friends = @fake_friends.where("main_description ILIKE ?", "%#{params[:query]}%")
+
+    if params[:query_category].present?
+      sql_subquery = <<~SQL
+        categories.name ILIKE :query_category
+      SQL
+      @fake_friends = @fake_friends.joins(:categories).where(sql_subquery, query_category: "%#{params[:query_category]}%")
     end
+
+    @fake_friends = @fake_friends.where("main_description ILIKE ?", "%#{params[:query]}%") if params[:query].present?
   end
 
   def new
@@ -44,7 +50,7 @@ class FakeFriendsController < ApplicationController
   private
 
   def fake_friend_params
-    params.require(:fake_friend).permit(:name, :gender, :age, :address, :main_description)
+    params.require(:fake_friend).permit(:name, :gender, :age, :address, :main_description, :price, :photo)
   end
 
   def categories_params
