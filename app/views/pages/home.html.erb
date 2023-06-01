@@ -78,3 +78,8 @@
  <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
 </body>
 </html>
+
+<% @categories.each do |category| %>
+  <%= @categories = @categories.find(params[:id]) %>
+  <p><%= link_to category, fake_friend_categories_path(@categories) %></p>
+<% end %>
