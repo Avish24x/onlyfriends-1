@@ -64,7 +64,7 @@ body {
    line-height: 1.5;
    height: -webkit-fill-available;
    color: var(--color-white-100);
-   background-color: var(--color-black-500);
+  //  background-color: var(--color-black-500);
 }
 
 main {
@@ -316,32 +316,34 @@ video {
    }
 
    // Media Query Breakpoint
-   @media only screen and (min-width: 48rem) {
-      position: relative;
-      top: 0;
-      width: auto;
-      height: auto;
-      padding: 0rem;
-      margin-left: auto;
-      background: none;
-      box-shadow: none;
+  }
+  @media only screen and (min-width: 48rem) {
+   .menu {
+    position: relative;
+     top: 0;
+     width: auto;
+     height: auto;
+     padding: 0rem;
+     margin-left: auto;
+     background: none;
+     box-shadow: none;
 
-      &-inner {
-         display: flex;
-         flex-direction: row;
-         column-gap: 2rem;
-         margin: 0 auto;
-      }
+     &-inner {
+        display: flex;
+        flex-direction: row;
+        column-gap: 2rem;
+        margin: 0 auto;
+     }
 
-      &-link {
-         text-transform: capitalize;
-      }
+     &-link {
+        text-transform: capitalize;
+     }
 
-      &-block {
-         margin-left: 2rem;
-      }
+     &-block {
+        margin-left: 2rem;
+     }
    }
-}
+  }
 
 .burger {
    position: relative;
@@ -494,7 +496,7 @@ video {
          content: "";
          bottom: -3rem;
          width: 4rem;
-         height: 2px;
+         height: 1.5px;
          transform: rotate(90deg);
          background: var(--color-white-100);
       }
@@ -519,7 +521,7 @@ video {
 }
 
 /* Caption text */
-.text {
+.text-home {
   color: #f2f2f2;
   font-size: 15px;
   padding: 8px 12px;

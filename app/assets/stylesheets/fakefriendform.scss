@@ -1,0 +1,111 @@
+// // app/assets/stylesheets/fakefriendsform.scss
+
+// // Adjust the form container
+// .fakefriendsform {
+//   max-width: 400px;
+//   margin: 0 auto;
+// }
+
+// // Style the form inputs
+// .fakefriendsform input[type="text"],
+// .fakefriendsform input[type="number"],
+// .fakefriendsform textarea {
+//   width: 100%;
+//   padding: 10px;
+//   border: 1px solid #ccc;
+//   border-radius: 4px;
+//   margin-bottom: 10px;
+// }
+
+// // Style the submit button
+// .fakefriendsform input[type="submit"] {
+//   background-color: #4CAF50;
+//   color: white;
+//   padding: 10px 20px;
+//   border: none;
+//   border-radius: 4px;
+//   cursor: pointer;
+// }
+
+// .fakefriendsform input[type="submit"]:hover {
+//   background-color: #45a049;
+// }
+// Adjust the form container
+// .fakefriendsform {
+//   max-width: 400px;
+//   margin: 10px auto;
+//   padding: 20px;
+//   border-radius: 4px;
+//   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+// }
+
+// // Center align the submit button
+// .fakefriendsform .submit-button {
+//   display: flex;
+//   justify-content: center;
+// }
+
+// // Style the submit button
+// .fakefriendsform input[type="submit"] {
+//   background-color: #4CAF50;
+//   color: white;
+//   padding: 10px 20px;
+//   border: none;
+//   border-radius: 4px;
+//   cursor: pointer;
+//   transition: background-color 0.3s ease;
+// }
+
+// .fakefriendsform input[type="submit"]:hover {
+//   background-color: #45a049;
+// }
+// SCSS code
+
+.fakefriendsform {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f2f2f2;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.fakefriendsform label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.fakefriendsform input[type="text"],
+.fakefriendsform input[type="number"],
+.fakefriendsform textarea,
+.fakefriendsform select {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  background-color: #e6e6e6;
+  margin-bottom: 15px;
+}
+
+.fakefriendsform select {
+  height: 40px;
+}
+
+.fakefriendsform .submit-button {
+  text-align: center;
+}
+
+.fakefriendsform input[type="submit"] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.fakefriendsform input[type="submit"]:hover {
+  background-color: #45a049;
+}
