@@ -6,6 +6,7 @@
     <ul class="name-age">
       <li><h1><%= @fake_friend.name %></h1></li>
       <li><h1><%= @fake_friend.age %></h1></li>
+      <li><h1><%= @fake_friend.price %></h1></li>
     </ul>
     <p><%= @fake_friend.main_description %></p>
     <p>Other Categories:</p>
@@ -19,7 +20,7 @@
 <%= simple_form_for([@fake_friend, @booking]) do |f| %>
   <%= f.input :booking_start, html5: true %>
   <%= f.input :booking_end, html5: true %>
-  <%= f.input :total_price %>
+  <p><%= @booking.total_price %><p>
   <%= f.submit %>
 <% end %>
 
