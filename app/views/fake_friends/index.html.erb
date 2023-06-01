@@ -5,64 +5,21 @@
     <%# <ul><%= category.name </ul> %>
 </div>
 
-
-<% @fake_friends.each do |fake_friend| %>
-  <h1>
-    <%= link_to fake_friend.name, fake_friend_path(fake_friend) %>
-  </h1>
-  <p><%= fake_friend.gender %></p>
-  <p><%= fake_friend.address %></p>
-  <p><%= fake_friend.age %></p>
-  <p><%= fake_friend.main_description %></p>
-  <p><%= fake_friend.rating %></p>
-
-<% end %>
-
   <div class="all-profile-container">
-    <div class="card-container">
-      <div class='banner-img'></div>
-      <img src='https://64.media.tumblr.com/b08edb53eb14b780be97813d8d25f8f0/tumblr_p2ozm7JYNE1w5bzojo1_400.png' alt='profile image' class="profile-img">
-      <li class="name-age">
-        <ul><h1 class="name">Jenna</h1></ul>
-        <ul><h1 class="age">24</h1></ul>
-      </li>
-      <p class="description">Hi there! My name is Anna and I am a book lover, traveler and professional blogger.</p>
-      <button class='card-btn'>View More</button>
-    </div>
+   <% @fake_friends.each do |fake_friend| %>
+      <div class="card-container">
+        <div class='banner-img'></div>
+        <%# <img src='https://static.independent.co.uk/s3fs-public/thumbnails/image/2015/06/06/15/Chris-Pratt.jpg?quality=75&width=990&crop=2048%3A1536%2Csmart&auto=webp' alt='profile image' class="profile-img"> %>
+        <ul class="name-age">
+          <li><h1 class="name"><%= fake_friend.name %></h1></li>
+          <li><h1 class="age"><%= fake_friend.age %></h1></li>
+        </ul>
+        <p class="description"><%= fake_friend.main_description.first(70) %>...</p>
+        <button class='card-btn'> <%= link_to "View Profile", fake_friend_path(fake_friend)%></button>
+      </div>
+   <% end %>
+ </div>
 
-    <div class="card-container">
-      <div class='banner-img'></div>
-      <img src='https://i.pinimg.com/564x/25/56/6c/25566cf5ff6fe1b7deb19731c1a4615a.jpg' alt='profile image' class="profile-img">
-      <li class="name-age">
-        <ul><h1 class="name">Marie</h1></ul>
-        <ul><h1 class="age">18</h1></ul>
-      </li>
-      <p class="description">Hi there! My name is Anna and I am a book lover, traveler and professional blogger.</p>
-      <button class='card-btn'>View More</button>
-    </div>
-
-    <div class="card-container">
-      <div class='banner-img'></div>
-      <img src='https://i.pinimg.com/564x/66/f8/5f/66f85fe06a32567c76e2e1b6ada89d3b.jpg' alt='profile image' class="profile-img">
-      <li class="name-age">
-        <ul><h1 class="name">Anna</h1></ul>
-        <ul><h1 class="age">20</h1></ul>
-      </li>
-      <p class="description">Hi there! My name is Anna and I am a book lover, traveler and professional blogger.</p>
-      <button class='card-btn'>View More</button>
-    </div>
-
-    <div class="card-container">
-      <div class='banner-img'></div>
-      <img src='https://i.pinimg.com/564x/59/23/14/592314c108b2b433f782c1ec3ca385c2.jpg' alt='profile image' class="profile-img">
-      <li class="name-age">
-        <ul><h1 class="name">Tom</h1></ul>
-        <ul><h1 class="age">29</h1></ul>
-      </li>
-      <p class="description">Hi there! My name is Anna and I am a book lover, traveler and professional blogger.</p>
-      <button class='card-btn'>View More</button>
-    </div>
-  </div>
 <p><%= link_to "add a new fake_friend", new_fake_friend_path %></p>
 
 <p><%= link_to "bookings", bookings_index_path %></p>

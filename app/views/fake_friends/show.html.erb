@@ -1,20 +1,32 @@
-<h1><%= @fake_friend.name %> <%= link_to "edit fake_friend", edit_fake_friend_path %></h1>
-<p><%= @fake_friend.gender %></p>
-<p><%= @fake_friend.age %></p>
-<p><%= @fake_friend.address %></p>
-<p><%= @fake_friend.main_description %></p>
+<%= link_to "Back to Profiles", fake_friends_path %>
+<h2 class="fake-friend-title">FakeFriend Profile</h2>
 
-<%= link_to "back", fake_friends_path %>
+<div class="profile-fake-friend">
+  <img src='https://64.media.tumblr.com/b08edb53eb14b780be97813d8d25f8f0/tumblr_p2ozm7JYNE1w5bzojo1_400.png' alt='profile image'>
+  <div class="all-info">
+    <ul class="name-age">
+      <li><h1><%= @fake_friend.name %></h1></li>
+      <li><h1><%= @fake_friend.age %></h1></li>
+    </ul>
+    <p><%= @fake_friend.main_description %></p>
+    <p>Other Categories:</p>
+  </div>
+</div>
 
-<%= link_to "Delete",
-  fake_friend_path(@fake_friend),
-  data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
-%>
+<%= link_to "edit fake_friend", edit_fake_friend_path %>
 
-<h2>book me:</h2>
+<h2>Book me:</h2>
 <%= simple_form_for([@fake_friend, @booking]) do |f| %>
   <%= f.input :booking_start, html5: true %>
   <%= f.input :booking_end, html5: true %>
   <%= f.input :total_price %>
   <%= f.submit %>
 <% end %>
+
+<%= link_to "Delete",
+  fake_friend_path(@fake_friend),
+  data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
+%>
+
+<p><%= @fake_friend.gender %></p>
+<p><%= @fake_friend.address %></p>
