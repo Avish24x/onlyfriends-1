@@ -14,6 +14,8 @@
 body {
   color: var(--clr-gray);
   // margin: 2rem;
+  // color:red;
+
 }
 
 .all-profile-container {
@@ -32,21 +34,21 @@ body {
   margin: 0.5rem;
 }
 
-// .banner-img {
-//   background-image: url(https://img.freepik.com/premium-vector/green-monstera-leaves-background-design-resource-vector_53876-169436.jpg?w=360);
-//   height: 14rem;
-//   width: 100%;
-//   background-position: center;
-//   background-repeat: no-repeat;
-//   background-size: cover;
-// }
+.banner-img {
+
+  height: 14rem;
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 
 .profile-img {
   width: 20rem;
   height: 20rem;
-  // clip-path: circle(60px at center);
-  // margin: auto;
-  // margin-top: 1rem;
+  clip-path: circle(60px at center);
+  margin: auto;
+  margin-top: 1rem;
 }
 
 .name {
@@ -77,6 +79,12 @@ body {
   font-weight: bold;
   padding: 1rem;
   background-color: var(--clr-primary);
+}
+
+.btn-absolute {
+  position: absolute;
+  bottom: 0;
+  left: 0;
 }
 
 .card-btn a{

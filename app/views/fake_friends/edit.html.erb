@@ -47,32 +47,38 @@
           <%= f.label :name, class: "text-uppercase" %>
           <%= f.text_field :name, class: "form-control", placeholder: "Edit your name" %>
         </div>
+
         <div class="form-group">
           <%= f.label :gender, class: "text-uppercase" %>
           <%= f.text_field :gender, class: "form-control", placeholder: "Edit your gender" %>
         </div>
+
         <div class="form-group">
           <%= f.label :age, class: "text-uppercase" %>
           <%= f.text_field :age, class: "form-control", placeholder: "Edit your age" %>
         </div>
-      
+
         <div class="form-group">
           <%= f.label :price, class: "text-uppercase" %>
           <%= f.text_field :price, class: "form-control", placeholder: "Enter your price" %>
         </div>
+
         <div class="form-group">
           <%= f.label :address, class: "text-uppercase" %>
           <%= f.text_field :address, class: "form-control", placeholder: "Enter your address" %>
         </div>
-      
+
         <div class="form-group">
           <%= f.label :main_description, class: "text-uppercase" %>
           <%= f.text_field :main_description, class: "form-control", placeholder: "Edit your main description" %>
         </div>
+
         <div class="form-group">
           <%= f.input :categories, as: :check_boxes, collection: Category.all %>
         </div>
+
         <%= f.submit "Submit", class: "btn-login" %>
+
       <% end %>
     </div>
   </div>

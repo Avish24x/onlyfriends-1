@@ -7,22 +7,29 @@
 #   Character.create(name: "Luke", movie: movies.first)
 
 require 'faker'
+require "open-uri"
 
 Category.destroy_all
+puts "deleted all category"
 Tag.destroy_all
+puts "deleted all tag"
 FakeFriend.destroy_all
+puts "deleted all fakfriends"
 User.destroy_all
+puts "deleted all user"
 
 Category.create(name: "Sport")
 Category.create(name: "Event")
 Category.create(name: "Party")
 Category.create(name: "Entertainment")
+puts "created sport event party entertainment"
 
-10.times do
+3.times do
   user_seed = User.create(
     email: Faker::Internet.email,
     password: "FF1234"
   )
+  user_seed.save
 
   fake_friend_seed = FakeFriend.create(
     age: rand(18..80),
@@ -33,11 +40,18 @@ Category.create(name: "Entertainment")
     rating: rand(0..5),
     user_id: user_seed.id
   )
+  puts "create fakefriends"
+
+  file = URI.open("https://res.cloudinary.com/dyzvwwvns/image/upload/v1685631974/development/1cj27m66hu18nxlrnh0u0mllde3e.jpg")
+  fake_friend_seed.photo.attach(io: file, filename: 'test.png', content_type: 'image/png')
+  puts "created 10 fake friends photo"
+  fake_friend_seed.save
 
   rand(0..4).times do
     Tag.create(
       fake_friend_id: fake_friend_seed.id,
       category_id: Category.all.sample.id
     )
+    puts "created 10 random 10tags"
   end
 end
