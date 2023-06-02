@@ -1,0 +1,20 @@
+
+<header class="header" id="header">
+   <nav class="navbar-home  ">
+      <a href="#" class="brand">Only<span>Friends</span> </a>
+
+      <div class="menu bg-transperant" id="menu">
+        <ul class="menu-inner">
+            <li class="menu-item"><a href="#" class="menu-link">Features</a></li>
+            <li class="menu-item"><a href="#" class="menu-link">Contact Us</a></li>
+            <li class="menu-item"><a href="#" class="menu-link">Support</a></li>
+        </ul>
+      </div>
+      <a href="#" class="">Discover</a>
+      <% if user_signed_in? %>
+        <%= link_to "Log out", destroy_user_session_path, class: "menu-block", data: {turbo_method: :delete} %>
+      <% else %>
+        <%= link_to "Sign in", new_user_session_path, class: "menu-block" %>
+      <% end %>
+   </nav>
+</header>

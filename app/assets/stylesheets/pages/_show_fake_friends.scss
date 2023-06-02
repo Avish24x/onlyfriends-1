@@ -1,15 +1,148 @@
+// .profile-fake-friend {
+//   overflow: hidden;
+//   height: 500px;
+//   // background: white;
+//   box-shadow: 0 0 15px rgba(0,0,0,0.2);
+//   display: flex;
+//   align-items: center;
+//   margin: 30px;
+// }
+
+// .profile-fake-friend img {
+//   height: auto;
+//   width: auto;
+//   object-fit: cover;
+// }
+
+// .profile-fake-friend h1 {
+//   font-size: 50px;
+//   font-weight: bold;
+//   margin: 0;
+// }
+
+// .profile-fake-friend p {
+//   font-size: 20px;
+//   line-height: 1.4;
+//   opacity: .7;
+//   margin-bottom: 0;
+//   margin-top: 10px;
+// }
+
+// .fake-friend-title {
+//  text-align: center;
+//  font-weight: bolder;
+//  color: #651fff;
+// }
+
+// .profile-fake-friend .all-info {
+//   padding: 24px;
+// }
+
+// #gender-profile {
+//   font-size: 25px;
+// }
+
+// .name-age h1 {
+//   height: fit-content;
+// }
+
+
+// // For Booking card
+// $ruler: 16px;
+// $color-blue: #1d00ae;
+// $color-bg: #EBECF0;
+// $color-shadow: #BABECC;
+// $color-white: #FFF;
+
+// .booking-container {
+//   background-color:$color-bg;
+// }
+
+// .booking-container p, input, select, textarea, button {
+//     font-family: 'Montserrat', sans-serif;
+//     letter-spacing: -0.2px;
+//     font-size: $ruler;
+// }
+
+// .booking-container p {
+//   color: $color-shadow;
+//   text-shadow: 1px 1px 1px $color-white;
+// }
+
+
+// .booking-container {
+//   padding: $ruler;
+//   width: $ruler*20;
+//   margin: 0 auto;
+// }
+
+// .date-of-booking {
+//   border: 0;
+//   outline: 0;
+//   font-size: $ruler;
+//   border-radius: $ruler*20;
+//   padding: $ruler;
+//   background-color:$color-bg;
+//   text-shadow: 1px 1px 0 $color-white;
+// }
+
+// .date-of-booking {
+//   margin-right: $ruler/2;
+//   box-shadow:  inset 2px 2px 5px $color-shadow, inset -5px -5px 10px $color-white;
+//   width: 100%;
+//   box-sizing: border-box;
+//   transition: all 0.2s ease-in-out;
+//   appearance: none;
+//   -webkit-appearance: none;
+
+//   &:focus {
+//     box-shadow:  inset 1px 1px 2px $color-shadow, inset -1px -1px 2px $color-white;
+//   }
+// }
+
+// .blue-button-book {
+//   display: block;
+//   width: 100%;
+//   color:$color-white;
+//   border: 0;
+//   outline: 0;
+//   font-size: $ruler;
+//   border-radius: $ruler*20;
+//   padding: $ruler;
+//   background-color:#651fff;
+//   font-weight: bolder;
+// }
+// .input-group {
+//   display: flex;
+//   align-items: center;
+//   justify-content: flex-start;
+
+//   label {
+//     margin: 0;
+//     flex: 1;
+//   }
+// }
+
+// .book-me-text {
+//   text-align: center;
+//   font-weight: bolder;
+// }
+
+
 .profile-fake-friend {
   overflow: hidden;
   height: 500px;
-  // background: white;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  background: white;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
   display: flex;
   align-items: center;
   justify-content: center;
   
   margin: 30px;
-  width: 900px;
+
+  border-radius: 10px;
 }
+
 
 .first-row-card {
   display: flex;
@@ -30,38 +163,44 @@
   height: 500px;
   width: 400px;
   object-fit: cover;
+  border-radius: 10px 0 0 10px;
 }
 
 .profile-fake-friend h1 {
-  font-size: 50px;
+  font-size: 40px;
   font-weight: bold;
   margin: 0;
+  color: #333;
 }
 
 .profile-fake-friend p {
-  font-size: 20px;
+  font-size: 18px;
   line-height: 1.4;
-  opacity: .7;
+  opacity: 0.7;
   margin-bottom: 0;
   margin-top: 10px;
+  color: #555;
 }
 
 .fake-friend-title {
- text-align: center;
- font-weight: bolder;
- color: #651fff;
-}
-
-.profile-fake-friend .all-info {
-  padding: 24px;
-}
-
-#gender-profile {
-  font-size: 25px;
+  text-align: center;
+  font-weight: bold;
+  color: #651fff;
+  margin-bottom: 20px;
+  font-size: 28px;
 }
 
 .name-age h1 {
   height: fit-content;
+  margin-bottom: 5px;
+}
+
+
+.book-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 30px;
 }
 
 // For Booking card
@@ -71,76 +210,80 @@ $color-bg: #EBECF0;
 $color-shadow: #BABECC;
 $color-white: #FFF;
 
+
 .booking-container {
-  background-color:$color-bg;
+  background-color: #EBECF0;
+  padding: 16px;
+  width: 320px;
+  margin: 0 auto;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
-.booking-container p, input, select, textarea, button {
-    font-family: 'Montserrat', sans-serif;
-    letter-spacing: -0.2px;
-    font-size: $ruler;
+.booking-container p,
+input,
+select,
+textarea,
+button {
+  font-family: 'Montserrat', sans-serif;
+  letter-spacing: -0.2px;
+  font-size: 16px;
 }
 
 .booking-container p {
-  color: $color-shadow;
-  text-shadow: 1px 1px 1px $color-white;
-}
-
-
-.booking-container {
-  padding: $ruler;
-  width: $ruler*20;
-  margin: 0 auto;
+  color: #BABECC;
 }
 
 .date-of-booking {
   border: 0;
   outline: 0;
-  font-size: $ruler;
-  border-radius: $ruler*20;
-  padding: $ruler;
-  background-color:$color-bg;
-  text-shadow: 1px 1px 0 $color-white;
-}
-
-.date-of-booking {
-  margin-right: $ruler/2;
-  box-shadow:  inset 2px 2px 5px $color-shadow, inset -5px -5px 10px $color-white;
+  font-size: 16px;
+  border-radius: 20px;
+  padding: 16px;
+  background-color: #EBECF0;
+  margin-right: 8px;
+  box-shadow: inset 2px 2px 5px #BABECC, inset -5px -5px 10px #FFF;
   width: 100%;
   box-sizing: border-box;
   transition: all 0.2s ease-in-out;
   appearance: none;
   -webkit-appearance: none;
+}
 
-  &:focus {
-    box-shadow:  inset 1px 1px 2px $color-shadow, inset -1px -1px 2px $color-white;
-  }
+.date-of-booking:focus {
+  box-shadow: inset 1px 1px 2px #BABECC, inset -1px -1px 2px #FFF;
 }
 
 .blue-button-book {
   display: block;
   width: 100%;
-  color:$color-white;
+  color: #FFF;
   border: 0;
   outline: 0;
-  font-size: $ruler;
-  border-radius: $ruler*20;
-  padding: $ruler;
-  background-color:#651fff;
-  font-weight: bolder;
+  font-size: 16px;
+  border-radius: 20px;
+  padding: 16px;
+  background-color: #651fff;
+  font-weight: bold;
+  margin-top: 20px;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
 }
-.input-group {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
 
-  label {
-    margin: 0;
-    flex: 1;
-  }
+.blue-button-book:hover {
+  background-color: #5500cc;
 }
 
 .book-me-text {
   text-align: center;
-  font-weight: bolder;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+.popo {
+  font-weight: bold;
+  color: #333;
 }
