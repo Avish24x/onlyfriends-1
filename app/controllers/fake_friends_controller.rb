@@ -44,7 +44,7 @@ class FakeFriendsController < ApplicationController
   private
 
   def fake_friend_params
-    params.require(:fake_friend).permit(:name, :gender, :age, :address, :main_description)
+    params.require(:fake_friend).permit(:name, :gender, :age, :address, :main_description, :photo)
   end
 
   def categories_params
