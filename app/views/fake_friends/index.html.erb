@@ -21,6 +21,7 @@
 <div class="all-profile-container">
   <% @fake_friends.each do |fake_friend| %>
     <div class="card-container">
+
         <%# <div class='banner-img'></div> %>
 
         <% if fake_friend&.photo&.key? %>
@@ -46,9 +47,4 @@
 
 <p><%= link_to "bookings", bookings_index_path %></p>
 
-<!-- <%= cl_image_tag("cld-sample-5",
-      width: 400, height: 300, crop: :fill) %>
 
-<!-- for face detection -->
-<%= cl_image_tag("IMAGE_WITH_FACE_ID",
-      width: 150, height: 150, crop: :thumb, gravity: :face) %>
