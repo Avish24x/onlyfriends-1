@@ -44,7 +44,7 @@ images = [
   "https://res.cloudinary.com/dyzvwwvns/image/upload/v1685709266/18aa589555075bb52b5cf7bdffcb8303_urh45w.jpg"
 ]
 
-30.times do |index|
+12.times do |index|
   user_seed = User.create(
     email: Faker::Internet.email,
     password: "FF1234"
