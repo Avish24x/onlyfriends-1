@@ -24,6 +24,7 @@ Category.create(name: "Sport")
 Category.create(name: "Event")
 Category.create(name: "Party")
 Category.create(name: "Entertainment")
+Category.create(name: "Eat Out")
 puts "created sport event party entertainment"
 
 images = [
@@ -32,7 +33,7 @@ images = [
   "https://res.cloudinary.com/dyzvwwvns/image/upload/v1685626856/development/fae4o4lmepai17v1c4p0al5attig.png"
 ]
 
-3.times do |index|
+50.times do |index|
   user_seed = User.create(
     email: Faker::Internet.email,
     password: "FF1234"
@@ -52,7 +53,7 @@ images = [
 
   file = URI.open(images[index])
   fake_friend_seed.photo.attach(io: file, filename: 'test.png', content_type: 'image/png')
-  puts "created 10 fake friends photo"
+  puts "created fake friends photo"
   fake_friend_seed.save
 
   rand(0..4).times do
@@ -60,6 +61,6 @@ images = [
       fake_friend_id: fake_friend_seed.id,
       category_id: Category.all.sample.id
     )
-    puts "created 10 random 10tags"
+    puts "created random tags in the FF"
   end
 end
