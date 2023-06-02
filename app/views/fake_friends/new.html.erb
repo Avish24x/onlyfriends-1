@@ -2,14 +2,13 @@
 <div class="fakefriendsform">
   <%= simple_form_for(@fake_friend, html: { class: "formcontainer"}) do |f| %>
     <%= f.input :name %>
-    <%= f.select :gender, options_for_select(['Male', 'Female', 'Other']), { include_blank: true }, class: "form-control" %>
+    <%= f.input :gender, collection: ['Male', 'Female', 'Gender Fluid'], class: "form-control" %>
     <%= f.input :price %>
     <%= f.input :address%>
     <%= f.input :main_description %>
+    <%= f.input :age %>
     <%= f.input :categories, as: :check_boxes, collection: Category.all %>
-      <%= f.input :photo, as: :file %>
-    <%= f.submit %>
+    <%= f.input :photo, as: :file %>
+    <%= f.submit  class: "btn btn-primary"%>
   <% end %>
-
-
-<%# après avoir créé un FF on veut aller dans son index (puis profil) %>
+</div>

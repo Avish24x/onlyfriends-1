@@ -1,39 +1,23 @@
-<div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
-  <div class="container-fluid">
-    <%= link_to "#", class: "navbar-brand" do %>
-      <%= image_tag "onlyfriends.png" %>
-    <% end %>
 
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+<header class="header" id="header">
+   <nav class="navbar-home  ">
+      <a href="/" class="brand">Only<span>Friends</span> </a>
 
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto">
-        <% if user_signed_in? %>
-          <li class="nav-item active">
-            <%= link_to "Home", "#", class: "nav-link" %>
-          </li>
-          <li class="nav-item">
-            <%= link_to "Messages", "#", class: "nav-link" %>
-          </li>
-          <li class="nav-item dropdown">
-          <a href="#" class="avatar" id="navbarDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            <%= image_tag "https://i.pinimg.com/564x/61/88/81/61888128ab65bde930ff3ce56f7727d0.jpg", class: "avatar", alt: "dropdown menu" %>
-          </a>
-            <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-              <%= link_to "Action", "#", class: "dropdown-item" %>
-              <%= link_to "Another action", "#", class: "dropdown-item" %>
-              <%= link_to "Log out", destroy_user_session_path, data: {turbo_method: :delete}, class: "dropdown-item" %>
-            </div>
-          </li>
-        <% else %>
-          <li class="nav-item">
-            <%= link_to "Login", new_user_session_path, class: "nav-link" %>
-          </li>
-        <% end %>
-      </ul>
-    </div>
-  </div>
-</div>
-<%#  %>
+      <div class="menu bg-transperant" id="menu">
+        <ul class="menu-inner">
+            <li class="menu-item"><a href="<%= root_path %>" class="menu-link">Home</a></li>
+            <li class="menu-item"><a href="<%= bookings_index_path %>" class="menu-link">My bookings</a></li>
+            <li class="menu-item"><a href="<%= new_fake_friend_path %>" class="menu-link">New Fake Friend</a></li>
+            <li class="menu-item"><a href="#" class="menu-link">Features</a></li>
+            <li class="menu-item"><a href="#" class="menu-link">Contact Us</a></li>
+            <li class="menu-item"><a href="#" class="menu-link">Support</a></li>
+        </ul>
+      </div>
+      <a href="#" class="">Discover</a>
+      <% if user_signed_in? %>
+        <%= link_to "Log out", destroy_user_session_path, class: "menu-block", data: {turbo_method: :delete} %>
+      <% else %>
+        <%= link_to "Sign in", new_user_session_path, class: "menu-block" %>
+      <% end %>
+   </nav>
+</header>
