@@ -9,10 +9,12 @@
 require 'faker'
 require "open-uri"
 
-Category.destroy_all
-puts "deleted all category"
 Tag.destroy_all
 puts "deleted all tag"
+Booking.destroy_all
+puts "deleted all booking"
+Category.destroy_all
+puts "deleted all category"
 FakeFriend.destroy_all
 puts "deleted all fakfriends"
 User.destroy_all
@@ -24,7 +26,13 @@ Category.create(name: "Party")
 Category.create(name: "Entertainment")
 puts "created sport event party entertainment"
 
-3.times do
+images = [
+  "https://res.cloudinary.com/dyzvwwvns/image/upload/v1685631974/development/1cj27m66hu18nxlrnh0u0mllde3e.jpg",
+  "https://res.cloudinary.com/dyzvwwvns/image/upload/v1685629815/development/bvbqi8vihma5e8xdiyk7rccayodm.png",
+  "https://res.cloudinary.com/dyzvwwvns/image/upload/v1685626856/development/fae4o4lmepai17v1c4p0al5attig.png"
+]
+
+3.times do |index|
   user_seed = User.create(
     email: Faker::Internet.email,
     password: "FF1234"
@@ -42,7 +50,7 @@ puts "created sport event party entertainment"
   )
   puts "create fakefriends"
 
-  file = URI.open("https://res.cloudinary.com/dyzvwwvns/image/upload/v1685631974/development/1cj27m66hu18nxlrnh0u0mllde3e.jpg")
+  file = URI.open(images[index])
   fake_friend_seed.photo.attach(io: file, filename: 'test.png', content_type: 'image/png')
   puts "created 10 fake friends photo"
   fake_friend_seed.save
