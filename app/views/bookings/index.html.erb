@@ -1,9 +1,18 @@
-<% @bookings.each do |booking| %>
-  <p>fake friend name : <%= booking.fake_friend.name %> <%= link_to "Delete",
-  booking_path(booking),
-  data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
-%></p>
-  <p><%= booking.booking_start %></p>
-  <p><%= booking.booking_end %></p>
-  <p>Rs.<%= booking.total_price %></p>
-<% end %>
+<h1 class="book">Your Bookings</h1>
+
+<div class="container">
+  <div class="cards">
+    <% @bookings.each do |booking| %>
+      <div class="card-product">
+        <%= cl_image_tag booking.fake_friend.photo.key, height: 300, width: 400, crop: :fill %>
+        <div class="card-product-infos">
+          <h2><%= booking.fake_friend.name %></h2>
+            <p><%= booking.booking_start.strftime('%m/%b/%Y %H:%M') %></p>
+            <p><%= booking.booking_end.strftime('%m/%b/%Y %H:%M') %></p>
+            <p>Rs.<%= booking.total_price %></p>
+        </div>
+        <%= link_to "Cancel Booking", booking_path(booking), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
+      </div>
+    <% end %>
+  </div>
+</div>
