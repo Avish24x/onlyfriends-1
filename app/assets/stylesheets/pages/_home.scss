@@ -126,7 +126,7 @@ video {
       font-weight: 700;
       line-height: 1.15;
       letter-spacing: -1px;
-      text-shadow: 0px 1px rgba(0, 0, 0, 0.05);
+      text-shadow: 0px 1px rgba(0, 0, 0, 0.685);
    }
 
    &-lg {
@@ -226,7 +226,7 @@ video {
    }
 }
 
-.navbar {
+.navbar-home {
    display: flex;
    flex-direction: row;
    align-items: center;

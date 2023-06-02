@@ -10,7 +10,7 @@
 <body>
 
 <header class="header" id="header">
-   <nav class="navbar  ">
+   <nav class="navbar-home  ">
       <a href="#" class="brand">Only<span>Friends</span> </a>
 
 <div class="menu bg-transperant" id="menu">
@@ -49,27 +49,27 @@
    </section>
     <div class="cards">
   <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
-    Breakfast
+    <p><%= link_to "All", fake_friends_path(query_category: "All") %></p>
   </div>
 
   <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/lunch.jpg)">
-    Lunch
+   <p><%= link_to "Event", fake_friends_path(query_category: "Event") %></p>
   </div>
 
   <div class="card-category" style="backgroundhttps://github.com/OhlalaLea/onlyfriends/pull/17/conflict?name=app%252Fviews%252Fpages%252Fhome.html.erb&ancestor_oid=105e555f94f7bdcf9656034dddba49547cbaa6c7&base_oid=7ead5cf85d53d2dc840cc199c297619d4a595a9a&head_oid=6274c009c7560050397742ba886c31cb14205e5a-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/dinner.jpg)">
-    Sport
+    <p><%= link_to "Eat Out", fake_friends_path(query_category: "Sport") %></p>
   </div>
 
    <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/dinner.jpg)">
-    Dinner
+   <p><%= link_to "Sport", fake_friends_path(query_category: "Sport") %></p>
   </div>
 
    <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/dinner.jpg)">
-    Hiking
+    <p><%= link_to "Party", fake_friends_path(query_category: "Party") %></p>
   </div>
 
    <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/dinner.jpg)">
-    Party
+   <p><%= link_to "Entertainement", fake_friends_path(query_category: "Entertainement") %></p>
   </div>
 </div>
 </main>
@@ -79,6 +79,6 @@
 </body>
 </html>
 
-<% @categories.each do |category| %>
-  <p><%= link_to category.name, fake_friends_path(query_category: category.name) %></p>
-<% end %>
+<%# <% @categories.each do |category| %>
+  <%# <p><%= link_to category.name, fake_friends_path(query_category: category.name) %></p>
+<%# <% end %>
