@@ -13,7 +13,7 @@
 
       <li><h1 id="gender-profile"><%= @fake_friend.gender %></h1></li>
 
-      <li><h1>Rs.<%= @fake_friend.price %></h1></li>
+      <li><h1>Rs. <span id="price"><%= @fake_friend.price %> </span></h1></li>
 
     </ul>
     <p><%= @fake_friend.main_description %></p>
@@ -24,12 +24,13 @@
 <%= link_to "edit fake_friend", edit_fake_friend_path %>
 
 
-<div class="book-box">
-  <%= simple_form_for([@fake_friend, @booking], html: { class: "booking-container"}) do |f| %>
+<div class="book-box" data-controller="booking">
+  <%= simple_form_for([@fake_friend, @booking], data: {booking_target: "form"}, html: { class: "booking-container"}) do |f| %>
     <h2 class="book-me-text">Book Me</h2>
-    <%= f.input :booking_start, input_html: { class: "date-of-booking" } , html5: true %>
-    <%= f.input :booking_end, input_html: { class: "date-of-booking" }, html5: true %>
+    <%= f.input :booking_start,  input_html: { class: "date-of-booking", data: {booking_target: "start", action: "change->booking#getPrice"} } , html5: true %>
+    <%= f.input :booking_end, input_html: { class: "date-of-booking", data: {booking_target: "end", action: "change->booking#getPrice"}  }, html5: true %>
 <!--     <%= f.input :total_price, input_html: { class: "date-of-booking" } %> -->
+    <p>Rs. <span data-booking-target="totalPrice"></span></p>
     <%= f.submit 'Confirm', class: "blue-button-book" %>
   <% end %>
 </div>
