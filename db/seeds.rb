@@ -9,10 +9,10 @@
 require 'faker'
 require "open-uri"
 
-Category.destroy_all
-puts "deleted all category"
 Tag.destroy_all
 puts "deleted all tag"
+Category.destroy_all
+puts "deleted all category"
 FakeFriend.destroy_all
 puts "deleted all fakfriends"
 User.destroy_all
