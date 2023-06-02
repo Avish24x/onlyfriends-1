@@ -21,8 +21,9 @@
   </div>
 </div>
 
-<%= link_to "edit fake_friend", edit_fake_friend_path %>
-
+<% if current_user.id == @fake_friend.user.id %>
+  <%= link_to "edit fake_friend", edit_fake_friend_path %>
+<% end %>
 
 <div class="book-box" data-controller="booking">
   <%= simple_form_for([@fake_friend, @booking], data: {booking_target: "form"}, html: { class: "booking-container"}) do |f| %>
@@ -35,10 +36,11 @@
   <% end %>
 </div>
 
-<%= link_to "Delete",
+<% if current_user.id == @fake_friend.user.id %>
+  <%= link_to "Delete",
   fake_friend_path(@fake_friend),
   data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
 %>
-
+<% end %>
 
 <p><%= @fake_friend.address %></p>

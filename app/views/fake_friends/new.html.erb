@@ -3,6 +3,7 @@
   <%= simple_form_for(@fake_friend, html: { class: "formcontainer"}) do |f| %>
     <%= f.input :name %>
     <%= f.select :gender, options_for_select(['Male', 'Female', 'Other']), { include_blank: true }, class: "form-control" %>
+    <%= f.input :age %>
     <%= f.input :price %>
     <%= f.input :address%>
     <%= f.input :main_description %>
