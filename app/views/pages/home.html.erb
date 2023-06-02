@@ -9,21 +9,6 @@
 </head>
 <body>
 
-<header class="header" id="header">
-   <nav class="navbar-home  ">
-      <a href="#" class="brand">Only<span>Friends</span> </a>
-
-<div class="menu bg-transperant" id="menu">
-   <ul class="menu-inner">
-      <li class="menu-item"><a href="#" class="menu-link">Features</a></li>
-      <li class="menu-item"><a href="#" class="menu-link">Contact Us</a></li>
-      <li class="menu-item"><a href="#" class="menu-link">Support</a></li>
-   </ul>
-</div>
-      <a href="#" class="menu-block">Discover</a>
-      <a href="#" class="menu-block">Sign in</a>
-   </nav>
-</header>
 <!-- Main Section -->
 <main class="main">
    <section class="section banner banner-section">
@@ -36,46 +21,50 @@
                Our Categories<i class="bx bx-down-arrow-alt"></i>
             </button>
          </div>
-         <div class="banner-links">
+         <%# <div class="banner-links">
             <a href="#" title=""><i class="bx bxl-facebook"></i></a>
             <a href="#" title=""><i class="bx bxl-instagram"></i></a>
             <a href="#" title=""><i class="bx bxl-twitter"></i></a>
             <a href="#" title=""><i class="bx bxl-youtube"></i></a>
-         </div>
+         </div> %>
 
       </div>
 
 
    </section>
     <div class="cards">
-  <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
-    <p><%= link_to "All", fake_friends_path(query_category: "All") %></p>
+  <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://i.pinimg.com/originals/bd/3c/02/bd3c025c8dee4d9ba1e48605ae764818.jpg)">
+    <p class="white-button-card"><%= link_to "All", fake_friends_path %></p>
   </div>
 
-  <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/lunch.jpg)">
-   <p><%= link_to "Event", fake_friends_path(query_category: "Event") %></p>
+  <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://i.pinimg.com/564x/dd/d1/90/ddd19049bd71d45484f02dab55dbdce5.jpg)">
+   <p class="white-button-card"><%= link_to "Event", fake_friends_path(query_category: "Event") %></p>
   </div>
 
-  <div class="card-category" style="backgroundhttps://github.com/OhlalaLea/onlyfriends/pull/17/conflict?name=app%252Fviews%252Fpages%252Fhome.html.erb&ancestor_oid=105e555f94f7bdcf9656034dddba49547cbaa6c7&base_oid=7ead5cf85d53d2dc840cc199c297619d4a595a9a&head_oid=6274c009c7560050397742ba886c31cb14205e5a-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/dinner.jpg)">
-    <p><%= link_to "Eat Out", fake_friends_path(query_category: "Sport") %></p>
+  <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://i.pinimg.com/564x/78/da/63/78da63e012052efabf7c81dd55040527.jpg)">
+    <p class="white-button-card"><%= link_to "Eat Out", fake_friends_path(query_category: "Sport") %></p>
   </div>
 
-   <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/dinner.jpg)">
-   <p><%= link_to "Sport", fake_friends_path(query_category: "Sport") %></p>
+   <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://witanddelight.com/content/uploads/2017/12/OutdoorVoices_Blog_-20_preview.jpg)">
+   <p class="white-button-card"><%= link_to "Sport", fake_friends_path(query_category: "Sport") %></p>
   </div>
 
-   <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/dinner.jpg)">
-    <p><%= link_to "Party", fake_friends_path(query_category: "Party") %></p>
+   <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://i.pinimg.com/originals/84/ba/d6/84bad61719a1a22e2eec6e261c0ffdd4.jpg)">
+    <p class="white-button-card"><%= link_to "Party", fake_friends_path(query_category: "Party") %></p>
   </div>
 
-   <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/dinner.jpg)">
-   <p><%= link_to "Entertainement", fake_friends_path(query_category: "Entertainement") %></p>
+   <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://i.pinimg.com/564x/97/6c/cb/976ccb52b88376847d7cffa7e8cf7dc9.jpg)">
+   <p class="white-button-card"><%= link_to "Entertainement", fake_friends_path(query_category: "Entertainement") %></p>
   </div>
 </div>
+
 </main>
 
 <script src="app/javascript/controllers/home.js"></script>
  <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+
+
+ 
 </body>
 </html>
 
