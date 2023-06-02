@@ -9,21 +9,6 @@
 </head>
 <body>
 
-<header class="header" id="header">
-   <nav class="navbar-home  ">
-      <a href="#" class="brand">Only<span>Friends</span> </a>
-
-<div class="menu bg-transperant" id="menu">
-   <ul class="menu-inner">
-      <li class="menu-item"><a href="#" class="menu-link">Features</a></li>
-      <li class="menu-item"><a href="#" class="menu-link">Contact Us</a></li>
-      <li class="menu-item"><a href="#" class="menu-link">Support</a></li>
-   </ul>
-</div>
-      <a href="#" class="menu-block">Discover</a>
-      <a href="#" class="menu-block">Sign in</a>
-   </nav>
-</header>
 <!-- Main Section -->
 <main class="main">
    <section class="section banner banner-section">
@@ -36,12 +21,12 @@
                Our Categories<i class="bx bx-down-arrow-alt"></i>
             </button>
          </div>
-         <div class="banner-links">
+         <%# <div class="banner-links">
             <a href="#" title=""><i class="bx bxl-facebook"></i></a>
             <a href="#" title=""><i class="bx bxl-instagram"></i></a>
             <a href="#" title=""><i class="bx bxl-twitter"></i></a>
             <a href="#" title=""><i class="bx bxl-youtube"></i></a>
-         </div>
+         </div> %>
 
       </div>
 
@@ -72,6 +57,7 @@
    <p class="white-button-card"><%= link_to "Entertainement", fake_friends_path(query_category: "Entertainement") %></p>
   </div>
 </div>
+
 </main>
 
 <script src="app/javascript/controllers/home.js"></script>

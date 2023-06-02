@@ -19,6 +19,7 @@ class FakeFriendsController < ApplicationController
   end
 
   def create
+
     @fake_friend = FakeFriend.new(fake_friend_params)
     @fake_friend.user = current_user
     @fake_friend.rating = 0
