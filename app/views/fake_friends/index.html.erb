@@ -21,32 +21,22 @@
 <div class="all-profile-container">
   <% @fake_friends.each do |fake_friend| %>
     <div class="card-container">
-        <%# <div class='banner-img'></div> %>
+      <%# <div class='banner-img'></div> %>
 
-        <% if fake_friend&.photo&.key? %>
-          <%= cl_image_tag fake_friend.photo.key, height: 300, width: 400, crop: :fill %>
-        <% else %>
-          <p>No image available</p>
-          <img src="https://img.freepik.com/premium-vector/green-monstera-leaves-background-design-resource-vector_53876-169436.jpg?w=360" alt="default image">
-        <% end %>
+      <% if fake_friend&.photo&.key? %>
+        <%= cl_image_tag fake_friend.photo.key, height: 300, width: 400, crop: :fill %>
+      <% else %>
+        <p>No image available</p>
+        <img src="https://img.freepik.com/premium-vector/green-monstera-leaves-background-design-resource-vector_53876-169436.jpg?w=360" alt="default image">
+      <% end %>
 
-        <ul class="name-age">
-          <li><h1 class="name"><%= fake_friend&.name %></h1></li>
-        </ul>
-        <p class="description"><%= fake_friend.main_description.first(70) %>...</p>
-        <button class='card-btn btn-absolute'> <%= link_to "View Profile", fake_friend_path(fake_friend)%></button>
-
-      </div>
-   <% end %>
- </div>
+      <ul class="name-age">
+        <li><h1 class="name"><%= fake_friend&.name %></h1></li>
+      </ul>
+      <p class="description"><%= fake_friend.main_description.first(70) %>...</p>
+      <button class='card-btn btn-absolute'> <%= link_to "View Profile", fake_friend_path(fake_friend)%></button>
+    </div>
+  <% end %>
+</div>
 
 <p><%= link_to "add a new fake_friend", new_fake_friend_path %></p>
-
-<p><%= link_to "bookings", bookings_index_path %></p>
-
-<!-- <%= cl_image_tag("cld-sample-5",
-      width: 400, height: 300, crop: :fill) %>
-
-<!-- for face detection -->
-<%= cl_image_tag("IMAGE_WITH_FACE_ID",
-      width: 150, height: 150, crop: :thumb, gravity: :face) %>
