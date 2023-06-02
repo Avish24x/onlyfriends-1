@@ -32,8 +32,10 @@
 
         <ul class="name-age">
           <li><h1 class="name"><%= fake_friend&.name %></h1></li>
+          <li><h1 class="age"><%= fake_friend&.age %></h1></li>
         </ul>
-        <p class="description"><%= fake_friend.main_description.first(70) %>...</p>
+        <p class="description"><%= fake_friend.main_description.first(60) %>...</p>
+        <h5 class="price-profile text-end">Rs<%= fake_friend&.price %></h5>
         <button class='card-btn btn-absolute'> <%= link_to "View Profile", fake_friend_path(fake_friend)%></button>
 
       </div>
