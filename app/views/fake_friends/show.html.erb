@@ -3,33 +3,41 @@
 
 <div class="profile-fake-friend">
     <% if @fake_friend.photo.key.present? %>
-  <%= cl_image_tag @fake_friend.photo.key, height: 500, width: 600, crop: :fill %>
-<% else %>
-  <p>No photo available</p>
-  <% end %>
-    <ul class="name-age">
-      <li><h1><%= @fake_friend.name %></h1></li>
-      <li><h1><%= @fake_friend.age %></h1></li>
+        <%= cl_image_tag @fake_friend.photo.key, height: 300, width: 400, crop: :fill %>
+    <% else %>
+        <p>No photo available</p>
+    <% end %>
+    <div class=" d-flex flex-column w-100 justify-content-around">
+      <div class="first-row-card">
+        <ul class="name-age-gender  d-flex align-items-center justify-content-between px-4 w-100">
+          <li><h1><%= @fake_friend.name %></h1></li>
+          <li><h1><%= @fake_friend.age %></h1></li>
+          <li><h1 id="gender-profile"><%= @fake_friend.gender %></h1></li>
+        </ul>
+      </div>
+      <div class="second-row-card mx-4">
+        <p><%= @fake_friend.main_description %></p>
+        <p>Other Categories:</p>
+      </div>
+      <div class="flex justify-content-end mx-4">
+        <h3 class="text-end">Rs<%= @fake_friend.price %></h3>
+      </div>
+    </div>
 
-      <li><h1 id="gender-profile"><%= @fake_friend.gender %></h1></li>
 
-      <li><h1>Rs.<%= @fake_friend.price %></h1></li>
-
-    </ul>
-    <p><%= @fake_friend.main_description %></p>
-    <p>Other Categories:</p>
   </div>
 </div>
 
 <%= link_to "edit fake_friend", edit_fake_friend_path %>
 
 
-<div class="book-box">
-  <%= simple_form_for([@fake_friend, @booking], html: { class: "booking-container"}) do |f| %>
+<div class="book-box" data-controller="booking">
+  <%= simple_form_for([@fake_friend, @booking], data: {booking_target: "form"}, html: { class: "booking-container"}) do |f| %>
     <h2 class="book-me-text">Book Me</h2>
-    <%= f.input :booking_start, input_html: { class: "date-of-booking" } , html5: true %>
-    <%= f.input :booking_end, input_html: { class: "date-of-booking" }, html5: true %>
+    <%= f.input :booking_start,  input_html: { class: "date-of-booking", data: {booking_target: "start", action: "change->booking#getPrice"} } , html5: true %>
+    <%= f.input :booking_end, input_html: { class: "date-of-booking", data: {booking_target: "end", action: "change->booking#getPrice"}  }, html5: true %>
 <!--     <%= f.input :total_price, input_html: { class: "date-of-booking" } %> -->
+    <p>Rs. <span data-booking-target="totalPrice"></span></p>
     <%= f.submit 'Confirm', class: "blue-button-book" %>
   <% end %>
 </div>

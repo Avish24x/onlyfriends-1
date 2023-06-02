@@ -72,6 +72,10 @@ body {
   font-size: 0.9rem;
 }
 
+.price-profile {
+  margin-bottom: 60px;
+}
+
 .card-btn {
   width: 100%;
   border: none;
@@ -79,6 +83,7 @@ body {
   font-weight: bold;
   padding: 1rem;
   background-color: var(--clr-primary);
+  margin-top: 30px;
 }
 
 .btn-absolute {

@@ -647,6 +647,7 @@ video {
     grid-template-columns: 1fr 1fr 1fr;
   }
 }
+
 ul {
   margin: 0px;
   padding: 0px;
@@ -807,4 +808,10 @@ color: #2463EB;
 .footer-menu li a {
 font-size: 14px;
 color: #878787;
+
+.white-button-card a {
+  color: white;
+  font-weight: bolder;
+  text-shadow: #717171;
+
 }

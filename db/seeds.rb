@@ -24,6 +24,7 @@ Category.create(name: "Sport")
 Category.create(name: "Event")
 Category.create(name: "Party")
 Category.create(name: "Entertainment")
+Category.create(name: "Eat Out")
 puts "created sport event party entertainment"
 
 images = [
@@ -32,7 +33,7 @@ images = [
   "https://res.cloudinary.com/dyzvwwvns/image/upload/v1685626856/development/fae4o4lmepai17v1c4p0al5attig.png"
 ]
 
-3.times do |index|
+2.times do |index|
   user_seed = User.create(
     email: Faker::Internet.email,
     password: "FF1234"
@@ -52,7 +53,7 @@ images = [
 
   file = URI.open(images[index])
   fake_friend_seed.photo.attach(io: file, filename: 'test.png', content_type: 'image/png')
-  puts "created 10 fake friends photo"
+  puts "created fake friends photo"
   fake_friend_seed.save
 
   rand(0..4).times do
@@ -60,6 +61,27 @@ images = [
       fake_friend_id: fake_friend_seed.id,
       category_id: Category.all.sample.id
     )
-    puts "created 10 random 10tags"
+    puts "created random tags in the FF"
   end
 end
+
+puts "create raph"
+raph = FakeFriend.create(
+  age: rand(18..45),
+  name: "Raph",
+  gender: ["Male", "Gender fluid"].sample,
+  main_description: "I am a tennis lover, with big biceps, triceps,quadriceps and chocolate 6 pacs",
+  price: rand(100..1000),
+  rating: rand(0..5),
+  user_id: User.last.id
+)
+file = URI.open("https://i.pinimg.com/564x/d2/22/f5/d222f555b4b52852aa154cbde8d10d5f.jpg")
+raph.photo.attach(io: file, filename: 'test.png', content_type: 'image/png')
+puts "created RAPH photo"
+raph.save
+
+puts "created tag sport"
+Tag.create(
+  fake_friend_id: raph.id,
+  category_id: Category.find_by(name: "Sport").id
+)
