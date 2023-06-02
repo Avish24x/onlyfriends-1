@@ -37,9 +37,11 @@ class FakeFriendsController < ApplicationController
   def edit; end
 
   def update
-    #categories_params[:categories].compact.each { |category_id| Tag.create(fake_friend: @fake_friend, category_id: category_id) }
-    @fake_friend.update(fake_friend_params)
-    redirect_to fake_friend_path(@fake_friend)
+    if @fake_friend.update(fake_friend_params)
+      redirect_to fake_friend_path(@fake_friend)
+    else
+      render :edit, status: :unprocessable_entity
+    end
   end
 
   def destroy

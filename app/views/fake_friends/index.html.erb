@@ -18,19 +18,24 @@
   </div>
 </div>
 
-  <div class="all-profile-container">
-   <% @fake_friends.each do |fake_friend| %>
-      <div class="card-container">
+<div class="all-profile-container">
+  <% @fake_friends.each do |fake_friend| %>
+    <div class="card-container">
+        <%# <div class='banner-img'></div> %>
 
-        <div class='banner-img'></div>
+        <% if fake_friend&.photo&.key? %>
           <%= cl_image_tag fake_friend.photo.key, height: 300, width: 400, crop: :fill %>
-          <ul class="name-age">
+        <% else %>
+          <p>No image available</p>
+          <img src="https://img.freepik.com/premium-vector/green-monstera-leaves-background-design-resource-vector_53876-169436.jpg?w=360" alt="default image">
+        <% end %>
 
-          <li><h1 class="name"><%= fake_friend.name %></h1></li>
-          <li><h1 class="age"><%= fake_friend.age %></h1></li>
+        <ul class="name-age">
+          <li><h1 class="name"><%= fake_friend&.name %></h1></li>
         </ul>
         <p class="description"><%= fake_friend.main_description.first(70) %>...</p>
-        <button class='card-btn'> <%= link_to "View Profile", fake_friend_path(fake_friend)%></button>
+        <button class='card-btn btn-absolute'> <%= link_to "View Profile", fake_friend_path(fake_friend)%></button>
+
       </div>
    <% end %>
  </div>
@@ -45,4 +50,3 @@
 <!-- for face detection -->
 <%= cl_image_tag("IMAGE_WITH_FACE_ID",
       width: 150, height: 150, crop: :thumb, gravity: :face) %>
- -->
