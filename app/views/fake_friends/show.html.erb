@@ -3,7 +3,7 @@
 
 <div class="profile-fake-friend">
     <% if @fake_friend.photo.key.present? %>
-  <%= cl_image_tag @fake_friend.photo.key, height: 300, width: 400, crop: :fill %>
+  <%= cl_image_tag @fake_friend.photo.key, height: 500, width: 600, crop: :fill %>
 <% else %>
   <p>No photo available</p>
   <% end %>
